@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DetourLayer;
 using meshPather;
-using Microsoft.Xna.Framework;
+using SlimDX;
 
 namespace meshFlood
 {

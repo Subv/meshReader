@@ -2,7 +2,7 @@
 using meshReader.Game;
 using meshReader.Game.ADT;
 using meshReader.Game.WMO;
-using Microsoft.Xna.Framework;
+using SlimDX;
 using NUnit.Framework;
 using System.Linq;
 

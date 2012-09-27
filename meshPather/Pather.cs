@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using DetourLayer;
 using meshDatabase.Database;
-using Microsoft.Xna.Framework;
+using SlimDX;
 using RecastLayer;
 
 namespace meshPather

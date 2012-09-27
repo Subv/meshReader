@@ -2,7 +2,7 @@
 using meshDatabase;
 using meshPather;
 using meshPathVisualizer;
-using Microsoft.Xna.Framework;
+using SlimDX;
 using NUnit.Framework;
 using RecastLayer;
 

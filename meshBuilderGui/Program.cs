@@ -12,7 +12,7 @@ namespace meshBuilderGui
         [STAThread]
         static void Main()
         {
-            MpqManager.Initialize("S:\\WoW");
+            MpqManager.Initialize(@"L:\World of Warcraft 3.3.5a");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

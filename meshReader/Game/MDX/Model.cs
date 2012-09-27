@@ -2,7 +2,7 @@
 using System.IO;
 using meshDatabase;
 using meshReader.Helper;
-using Microsoft.Xna.Framework;
+using SlimDX;
 
 namespace meshReader.Game.MDX
 {

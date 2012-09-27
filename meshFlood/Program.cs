@@ -7,7 +7,7 @@ using meshBuilder;
 using meshDatabase;
 using meshDatabase.Database;
 using meshPather;
-using Microsoft.Xna.Framework;
+using SlimDX;
 
 namespace meshFlood
 {
@@ -22,7 +22,7 @@ namespace meshFlood
             }
 
             var continent = args[0];
-            var path = "S:\\meshReader\\Meshes\\" + continent;
+            var path = @"C:\\Users\\Sebastian\\CactusWOW\\MeshReader\\meshReader\\meshBuilderGui\\bin\\Debug\\" + continent;
             if (!Directory.Exists(path))
             {
                 Console.WriteLine("Can't find mesh directory: " + path);
@@ -30,7 +30,7 @@ namespace meshFlood
             }
 
             Console.Write("Setting up data storage.. ");
-            string floodDir = "S:\\meshReader\\Meshes\\Floodfill\\";
+            string floodDir = "C:\\Users\\Sebastian\\CactusWOW\\MeshReader\\meshReader\\meshBuilderGui\\bin\\Debug\\FloodFill\\";
             if (!Directory.Exists(floodDir))
                 Directory.CreateDirectory(floodDir);
             floodDir += continent;
@@ -71,7 +71,7 @@ namespace meshFlood
             }
 
             Console.WriteLine("Initializing DBC backend...");
-            MpqManager.InitializeDBC("S:\\WoW");
+            MpqManager.InitializeDBC(@"L:\World of Warcraft 3.3.5a");
 
             Console.Write("Identifiying map id.. ");
             int mapId = PhaseHelper.GetMapIdByName(continent);

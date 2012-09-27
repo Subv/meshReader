@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meshDisplay", "meshDisplay\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meshDisplayContent", "meshDisplay\meshDisplayContent\meshDisplayContent.contentproj", "{CB522F8A-2660-4FE1-A065-5E0CA9EBB278}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meshReaderTest", "meshReaderTest\meshReaderTest.csproj", "{B419558D-1CB7-44B4-8F8F-CB491C04804F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RecastLayer", "RecastLayer\RecastLayer.vcxproj", "{88ABD3DA-803D-4D83-9894-F669B8CFAEAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meshBuilder", "meshBuilder\meshBuilder.csproj", "{11536EC8-063C-48BD-A49E-B7DA7D0C4399}"
@@ -71,18 +69,6 @@ Global
 		{CB522F8A-2660-4FE1-A065-5E0CA9EBB278}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{CB522F8A-2660-4FE1-A065-5E0CA9EBB278}.Release|Win32.ActiveCfg = Release|x86
 		{CB522F8A-2660-4FE1-A065-5E0CA9EBB278}.Release|x86.ActiveCfg = Release|x86
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|Win32.ActiveCfg = Release|Any CPU
-		{B419558D-1CB7-44B4-8F8F-CB491C04804F}.Release|x86.ActiveCfg = Release|Any CPU
 		{88ABD3DA-803D-4D83-9894-F669B8CFAEAD}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{88ABD3DA-803D-4D83-9894-F669B8CFAEAD}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{88ABD3DA-803D-4D83-9894-F669B8CFAEAD}.Debug|Mixed Platforms.Build.0 = Debug|Win32

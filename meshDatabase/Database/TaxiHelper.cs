@@ -44,7 +44,7 @@ namespace meshDatabase.Database
             if (_initialized)
                 return;
 
-            MpqManager.InitializeDBC("S:\\WoW");
+            MpqManager.InitializeDBC(@"L:\World of Warcraft 3.3.5a");
             _taxiNodes = MpqManager.GetDBC("TaxiNodes");
             _taxiPath = MpqManager.GetDBC("TaxiPath");
             _initialized = true;

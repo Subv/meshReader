@@ -65,7 +65,7 @@ namespace meshDisplay
             Camera = new CameraManager(this);
             Components.Add(Camera);
 
-            MpqManager.Initialize("S:\\WoW");
+            MpqManager.Initialize(@"L:\World of Warcraft 3.3.5a");
             //Components.Add(new AdtDrawer(this, "World\\maps\\Azeroth\\Azeroth_36_49.adt"));
             //Components.Add(new AdtDrawer(this, "World\\maps\\Azeroth\\Azeroth_29_49.adt")); Stormwind
             //Components.Add(new AdtDrawer(this, "World\\maps\\Kalimdor\\Kalimdor_32_30.adt"));

@@ -5,7 +5,7 @@ using meshReader.Game.Caching;
 using meshReader.Game.MDX;
 using meshReader.Game.WMO;
 using meshReader.Helper;
-using Microsoft.Xna.Framework;
+using SlimDX;
 
 namespace meshReader.Game.ADT
 {
@@ -87,7 +87,7 @@ namespace meshReader.Game.ADT
             foreach (var group in root.Groups)
             {
                 int vertOffset = vertices.Count;
-                vertices.AddRange(group.Vertices.Select(vert => Vector3.Transform(vert, transformation)));
+                vertices.AddRange(group.Vertices.Select(vert => Vector3.Transform(vert, transformation).ToVector3()));
 
                 for (int i = 0; i < group.Triangles.Length; i++)
                 {
@@ -126,7 +126,7 @@ namespace meshReader.Game.ADT
                         continue;
                     var doodadTransformation = Transformation.GetWmoDoodadTransformation(instance, def);
                     int vertOffset = vertices.Count;
-                    vertices.AddRange(model.Vertices.Select(vert => Vector3.Transform(vert, doodadTransformation)));
+                    vertices.AddRange(model.Vertices.Select(vert => Vector3.Transform(vert, doodadTransformation).ToVector3()));
                     foreach (var tri in model.Triangles)
                         triangles.Add(new Triangle<uint>(TriangleType.Wmo, (uint) (tri.V0 + vertOffset),
                                                          (uint) (tri.V1 + vertOffset), (uint) (tri.V2 + vertOffset)));
@@ -170,7 +170,7 @@ namespace meshReader.Game.ADT
                 basePosition.Z = 0.0f;
 
             return Vector3.Transform(basePosition + new Vector3(x*Constant.UnitSize, y*Constant.UnitSize, height),
-                                     transformation);
+                                     transformation).ToVector3();
         }
 
         private void ReadDefinitions()

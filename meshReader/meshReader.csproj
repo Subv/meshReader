@@ -38,13 +38,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="MpqLib">
       <HintPath>.\MpqLib.dll</HintPath>
     </Reference>
+    <Reference Include="SlimDX, Version=4.0.11.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -80,6 +77,8 @@
     <Compile Include="Game\WMO\WorldModelHeader.cs" />
     <Compile Include="Game\WMO\WorldModelRoot.cs" />
     <Compile Include="Game\World.cs" />
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\MathHelper.cs" />
     <Compile Include="Helper\StreamExtensions.cs" />
     <Compile Include="Helper\Vector3Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

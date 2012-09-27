@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using meshPather;
-using Microsoft.Xna.Framework;
+using SlimDX;
 using NUnit.Framework;
 using RecastLayer;
 

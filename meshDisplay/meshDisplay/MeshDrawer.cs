@@ -37,7 +37,7 @@ namespace meshDisplay
                 _mesh.Initialize(32768, 128, World.Origin, Constant.TileSize, Constant.TileSize);
                 MeshTile discard;
                 _mesh.AddTile(
-                    File.ReadAllBytes(@"S:\meshReader\meshes\" + _continent + "\\" + _continent + "_" + _tileX + "_" +
+                    File.ReadAllBytes(@"C:\\Users\\Sebastian\\CactusWOW\\MeshReader\\meshReader\\meshBuilderGui\\bin\\Debug\\" + _continent + "\\" + _continent + "_" + _tileX + "_" 
                                       _tileY + ".tile"), out discard);
             }
             float[] vertices;

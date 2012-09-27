@@ -1,9 +1,8 @@
 ﻿using DetourLayer;
-using Microsoft.Xna.Framework;
+using SlimDX;
 
 namespace meshPather
 {
-
     public static class Utility
     {
         public static bool HasSucceeded(this DetourStatus status)
