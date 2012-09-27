@@ -51,14 +51,24 @@ namespace meshBuilder
             bmax[2] = origin[2] + (Constant.TileSize * (Y + 1));
         }
 
+        public static ADT GetAdt(string world, int x, int y)
+        {
+            ADT adt = null;
+            if (Cache.Adt.TryGetValue(new Tuple<int, int>(x, y), out adt))
+                return adt;
+            adt = new ADT(GetAdtPath(world, x, y));
+            adt.Read();
+            Cache.Adt.Add(new Tuple<int, int>(x, y), adt);
+            return adt;
+        }
+
         public byte[] Build(BaseLog log)
         {
             Log = log;
             Geometry = new Geometry {Transform = true};
 
             {
-                var main = new ADT(GetAdtPath(World, X, Y));
-                main.Read();
+                var main = GetAdt(World, X, Y);
                 Geometry.AddAdt(main);
             }
 
@@ -80,8 +90,7 @@ namespace meshBuilder
                         if (tx == X && ty == Y)
                             continue;
 
-                        var adt = new ADT(GetAdtPath(World, tx, ty));
-                        adt.Read();
+                        var adt = GetAdt(World, tx, ty);
                         Geometry.AddAdt(adt);
                     }
                     catch (FileNotFoundException)
@@ -178,8 +187,9 @@ namespace meshBuilder
 
             // build off mesh connections for flightmasters
             // bMax and bMin are switched here because of the coordinate system transformation
-            var taxis = TaxiHelper.GetNodesInBBox(MapId, tilebMax.ToWoW(), tilebMin.ToWoW());
+            /// This is not needed for our particular use.
             var connections = new List<OffMeshConnection>();
+            /*var taxis = TaxiHelper.GetNodesInBBox(MapId, tilebMax.ToWoW(), tilebMin.ToWoW());
             foreach (var taxi in taxis)
             {
                 Log.Log(LogCategory.Warning,
@@ -203,7 +213,7 @@ namespace meshBuilder
                     Log.Log(LogCategory.Warning,
                             "\tPath to: \"" + target.Value.Name + "\" Id: " + target.Value.Id + " Path Id: " +
                             target.Key);
-            }
+            }*/
 
             byte[] tileData;
             if (!Detour.CreateNavMeshData(out tileData, pmesh, dmesh,
